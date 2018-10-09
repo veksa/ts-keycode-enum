@@ -41,21 +41,21 @@ onKeyPress = (ev) => {
 
 ## Usage
 
-To use this module, import the `Key` enum at the top of your TypeScript file using the enum:
+To use this module, import the `Key` or `FirefoxKey` (if you support firefox browser) enum at the top of your TypeScript file using the enum:
 
 ```JavaScript
-import { Key } from 'ts-keycode-enum';
+import { Key, FirefoxKey } from 'ts-keycode-enum';
 ```
 
 You can now use a readable enum value in place of any raw keycodes throughout the file:
 
 ```JavaScript
-if (ev.which === Key.Escape) { ... }
+if (ev.which === Key.SemiColon || ev.which === FirefoxKey.SemiColon) { ... }
 ```
 
-See [Key.enum.ts](./Key.enum.ts) for a complete list of available keys.
+See [Key.enum.ts](./src/Key.enum.ts) and [FirefoxKey.enum.ts](./src/FirefoxKey.enum.ts) for a complete list of available keys.
 
-In addition, to aid with readability, a number of enum values have aliases.  For example:
+In addition, to aid with readability, a number of enum values have aliases. For example:
 
 ```JavaScript
 // this  true - these values are equal
